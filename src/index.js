@@ -16,14 +16,17 @@ function reducer(state = {},  action){
 
 const store = createStore(reducer)
 
-store.subscribe(() => {
+store.subscribe((st) => {
     const state = store.getState()
     console.log(state)
+    console.log(st)
 })
 
-store.dispatch({
-    type : 'CREAR', 
-    payload : {
-        value : Math.random()
-    }
-})
+setInterval(() => {
+    store.dispatch({
+        type : 'CREAR', 
+        payload : {
+            value : Math.random()
+        }
+    })
+}, 1000)
