@@ -12,15 +12,17 @@ export default function reducer(state = [], action){
             ]
         }
         case "BORRAR":{
-            const index = state.findIndex(comentario => comentario.id === action.payload.id)
+            const index = state.findIndex(n => n.id == action.payload.id)
             state.splice(index, 1)
             return [
                 ...state
             ]
         }
         case "ALTERNAR":{
-            const comentario = state.find(comentario => comentario.id === action.payload.id)
-            comentario.completado = !comentario.completado
+            const item = state.find(n => {
+               return  n.id == action.payload.id})
+
+            item.completado = !item.completado
             return [
                 ...state
             ]
