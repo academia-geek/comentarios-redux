@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/agileinnova/comentarios-redux#readme",
   "dependencies": {
+    "redux": "^4.0.5",
     "webpack": "^4.44.2",
     "webpack-cli": "^3.3.12",
     "webpack-dev-server": "^3.11.0"
